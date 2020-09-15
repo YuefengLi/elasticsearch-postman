@@ -392,7 +392,10 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indices\": \"index_activity\",\n    \"ignore_unavailable\": true,\n    \"include_global_state\": false\n}\n"
+						}
 						"url": {
 							"raw": "http://{{url}}/_snapshot/{{repository}}/{{snapshot}}wait_for_completion=true",
 							"protocol": "http",
@@ -415,14 +418,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://{{url}}/_snapshot/{{reposirtory}}/_all",
+							"raw": "http://{{url}}/_snapshot/{{repository}}/_all",
 							"protocol": "http",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"_snapshot",
-								"{{reposirtory}}",
+								"{{repository}}",
 								"_all"
 							]
 						}
